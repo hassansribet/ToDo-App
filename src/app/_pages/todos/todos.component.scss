@@ -15,7 +15,7 @@
 }
 
 .container {
-  max-width: 600px;
+  max-width: 700px !important;
 
   .todo-box {
     padding: 25px;
@@ -45,9 +45,31 @@
       border: none;
       border-radius: 3px;
 
+      opacity: .7;
+
+      transition: opacity .5s;
+
       i {
         font-size: 1.5em;
+
+        margin-right: 10px;
+      }
+
+      &:hover {
+        opacity: 1;
+
+        box-shadow: 0 0 0 2px rgba(black, .1);
+      }
+
+      &:active {
+        opacity: .7;
       }
     }
   }
+}
+
+.todos-list {
+  margin: 40px 0;
+
+
 }

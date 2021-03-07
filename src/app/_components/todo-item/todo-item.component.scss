@@ -1,0 +1,51 @@
+@import '../../../customizedStyle.scss';
+
+.todo-item {
+  display: flex;
+
+  cursor: pointer;
+
+  align-items: center;
+
+  padding: 10px 15px;
+
+  margin: 10px 0;
+
+  .todo-check-box {
+    display: flex;
+
+    flex-shrink: 0;
+
+    border: 2px solid $light-grey;
+    border-radius: 50%;
+
+    width: 25px;
+    height: 25px;
+
+    margin-right: 10px;
+
+    transition: background-color .2s;
+
+    i {
+      font-size: 20px;
+
+      margin: auto;
+
+      opacity: 0;
+
+      transition: opacity .3s;
+    }
+  }
+
+  .todo-text {
+    text-align: justify;
+  }
+}
+
+.todo-item:hover .todo-check-box  {
+  background-color: $grey;
+
+  i {
+    opacity: .3;
+  }
+}
