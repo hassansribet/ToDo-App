@@ -1,4 +1,4 @@
-<div class="todo-item">
+<div class="todo-item" [ngClass]="{'completed' : todo.completed}" (click)="todo.completed = !todo.completed">
   <div class="todo-check-box">
     <i class="material-icons">done</i>
   </div>

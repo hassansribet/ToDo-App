@@ -7,9 +7,9 @@
 
   align-items: center;
 
-  padding: 10px 15px;
+  padding: 20px 15px;
 
-  margin: 10px 0;
+  border-bottom: 1px solid #F2F3F5;
 
   .todo-check-box {
     display: flex;
@@ -47,5 +47,16 @@
 
   i {
     opacity: .3;
+  }
+}
+
+.todo-item.completed .todo-check-box {
+  background-color: #0BDFAA;
+
+  border: none;
+
+  i {
+    opacity: 1;
+    color: $grey;
   }
 }
