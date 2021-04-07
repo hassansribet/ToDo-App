@@ -1,9 +1,21 @@
-<div class="todo-item" [ngClass]="{'completed' : todo.completed}" (click)="todo.completed = !todo.completed">
-  <div class="todo-check-box">
+<div class="todo-item" [ngClass]="{'completed' : item.completed}">
+  <div (click)="item.completed = !item.completed" class="todo-check-box">
     <i class="material-icons">done</i>
   </div>
 
-  <div class="todo-text">
-    <p>{{ todo.label }}</p>
+  <div (click)="item.completed = !item.completed" class="todo-text">
+    <p>{{ item.label }}</p>
+  </div>
+
+  <div class="todo-actions">
+    <div class="todo-action" (click)="editItem(item)">
+      <i class="material-icons">edit</i>
+      <span class="label">Edit</span>
+    </div>
+
+    <div class="todo-action" (click)="deleteItem(item)">
+      <i class="material-icons">delete</i>
+      <span class="label">Delete</span>
+    </div>
   </div>
 </div>

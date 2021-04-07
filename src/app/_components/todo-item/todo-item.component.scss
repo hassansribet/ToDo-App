@@ -3,8 +3,6 @@
 .todo-item {
   display: flex;
 
-  cursor: pointer;
-
   align-items: center;
 
   padding: 20px 15px;
@@ -13,6 +11,8 @@
 
   .todo-check-box {
     display: flex;
+
+    cursor: pointer;
 
     flex-shrink: 0;
 
@@ -38,6 +38,8 @@
   }
 
   .todo-text {
+    cursor: pointer;
+
     text-align: justify;
   }
 }
@@ -58,5 +60,51 @@
   i {
     opacity: 1;
     color: $grey;
+  }
+}
+
+.todo-item .todo-actions {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+
+  display: flex;
+
+  background-color: #eff0f1;
+
+  border-radius: 7px 7px 0 0;
+
+  .todo-action {
+    display: flex;
+    flex-direction: row;
+
+    padding: 7px 10px;
+
+    text-align: center;
+
+    i.material-icons {
+      font-size: 1.1em;
+    }
+
+    .label {
+      display: none;
+
+      font-size: 12px;
+
+      transition: all .5s;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      background-color: #eee;
+
+      text-align: left;
+
+      .label {
+        display: block;
+        text-decoration: underline;
+      }
+    }
   }
 }

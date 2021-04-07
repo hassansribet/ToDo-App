@@ -8,11 +8,20 @@ import { Item } from '../../_shared/models/item.model';
 })
 export class TodoItemComponent implements OnInit {
 
-  @Input() todo: Item;
+  @Input() item: Item;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  editItem(item: Item): void {
+    console.log('edit: ', item);
+  }
+
+  deleteItem(item: Item): void {
+    if (window.confirm('Are you sure ?')) {
+      console.log('delete: ', item);
+    }
+  }
 }
